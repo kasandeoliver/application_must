@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>MUST Application Portal</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="jyson" href="app.js">
+</head>
+
+<body>
+    <div class="shell">
+
+        <!-- Left: brand and application guidelines -->
+        <aside>
+            <div class="logo">
+                <img src="image/must.png" alt="MUST crest" class="crest">
+                <h1>Mbarara University of Science and Technology<small>Online Application Portal</small></h1>
+            </div>
+
+            <p class="tag">Your journey to <span>MUST</span> starts here.</p>
+
+            <ol class="steps">
+                <li>Create your account and receive a temporary password.</li>
+                <li>Log in and apply for our undergraduate programmes.</li>
+                <li>Pay the non-refundable application fee at any bank accepting URA payments.</li>
+                <li>Completed applications must be accompanied by certified copies of academic documents.</li>
+            </ol>
+
+            <details>
+                <summary>Entry requirements</summary>
+                <ul>
+                    <li>Direct entry: five UCE passes at one sitting and two principal passes at UACE.</li>
+                    <li>Diploma entry: a diploma with at least a Credit from an accredited institution.</li>
+                    <li>Each programme may have extra subject requirements.</li>
+                    <li>Foreign qualifications must be equated first: UNEB (O and A-Level) or NCHE (certificates,
+                        diplomas, degrees).</li>
+                    <li>Non-English applicants may need proof of English proficiency.</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Application fees (UGX)</summary>
+                <table>
+                    <tr>
+                        <th>Entry</th>
+                        <th>Ugandan / East African</th>
+                        <th>International</th>
+                    </tr>
+                    <tr>
+                        <td>Direct entry</td>
+                        <td>50,000</td>
+                        <td>100,000</td>
+                    </tr>
+                    <tr>
+                        <td>Diploma entry</td>
+                        <td>80,000</td>
+                        <td>160,000</td>
+                    </tr>
+                </table>
+                <p>Pay under the account name Uganda Revenue Authority.</p>
+            </details>
+
+            <details>
+                <summary>Documents and integrity</summary>
+                <p>Send certified copies to admissions@must.ac.ug or deliver them to the Academic Registrar’s office.
+                    Impersonation, falsified documents or false or incomplete information lead to automatic cancellation
+                    of admission.</p>
+            </details>
+
+            <p class="contact">Need help? admissions@must.ac.ug · +256-786-706490</p>
+        </aside>
+
+        <!-- Right: the two interfaces -->
+        <main>
+
+            <!-- Interface 2: Account creation -->
+            <section class="view" id="register">
+                <h2>Create your account</h2>
+                <p class="sub">Provide your details to receive a temporary password.</p>
+
+                <form action="#register" method="post">
+                    <div class="f">
+                        <input type="text" id="surname" placeholder=" " required>
+                        <label for="surname">Surname</label>
+                    </div>
+
+                    <div class="f">
+                        <input type="text" id="other" placeholder=" " required>
+                        <label for="other">Other names</label>
+                    </div>
+
+                    <div class="row">
+                        <div class="f">
+                            <select id="code">
+                                <option>Uganda +256</option>
+                                <option>Kenya +254</option>
+                                <option>Tanzania +255</option>
+                                <option>Rwanda +250</option>
+                            </select>
+                            <label for="code">Country</label>
+                        </div>
+                        <div class="f">
+                            <input type="tel" id="phone" placeholder=" " pattern="[0-9]{9,10}" required>
+                            <label for="phone">Phone (0770000000)</label>
+                        </div>
+                    </div>
+                    <p class="hint">Use an active phone number to receive notifications.</p>
+
+                    <div class="f">
+                        <input type="email" id="mail" placeholder=" " required>
+                        <label for="mail">Email address</label>
+                    </div>
+                    <p class="hint">No email yet? <a href="https://accounts.google.com/signup">Create one here</a>.</p>
+
+                    <div class="note">Your temporary password will be sent to this email. Admission feedback is also
+                        published on the MUST website.</div>
+
+                    <label class="check">
+                        <input type="checkbox" required>
+                        <span>I confirm that all information I provide is accurate and complete. I understand that false
+                            information or impersonation leads to cancellation of admission.</span>
+                    </label>
+
+                    <button class="btn" type="submit">Create account</button>
+                </form>
+
+                <p class="switch">Already registered? <a href="#login">Sign in</a></p>
+            </section>
+
+            <!-- Interface 1: Login (default view) -->
+            <section class="view" id="login">
+                <h2>Welcome back</h2>
+                <p class="sub">Log in to access your application dashboard.</p>
+
+                <form action="#login" method="post">
+                    <div class="f">
+                        <input type="email" id="email" placeholder=" " required>
+                        <label for="email">Email address</label>
+                    </div>
+
+                    <div class="f">
+                        <input type="password" id="pass" placeholder=" " required>
+                        <label for="pass">Password</label>
+                    </div>
+
+                    <div class="between">
+                        <label class="check" style="margin:0"><input type="checkbox"><span>Remember me</span></label>
+                        <a href="#login">Forgot password?</a>
+                    </div>
+
+                    <button class="btn" type="submit">Sign in</button>
+                </form>
+
+                <div class="note">Applications are submitted only through this portal. You can apply for our
+                    undergraduate programmes in one application.</div>
+
+                <p class="switch">New to the portal? <a href="#register">Create an account</a></p>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>
